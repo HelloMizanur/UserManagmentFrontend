@@ -20,7 +20,7 @@ export default function Signup() {
         setErrors(formErrors);
 
         if (!formErrors.name && !formErrors.email && !formErrors.password) {
-            axios.post('https://usermanagmentt.onrender.com/signup', values)
+            axios.post('http://localhost:8080/signup', values)
                 .then(res => {
                     console.log('Signup successful:', res.data);
                     navigate('/');
